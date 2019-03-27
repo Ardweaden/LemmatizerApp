@@ -28,3 +28,9 @@ EXPOSE 80
 
 # Run app.py when the container launches
 #CMD ["python", "app.py"]
+
+RUN pip install django_debug_toolbar
+
+RUN python manage.py migrate
+
+RUN python manage.py runserver 80

@@ -8,6 +8,7 @@ from lemmagen.lemmatizer import Lemmatizer
 
 @require_http_methods(['GET'])
 def index(request,phrase_list):
+	print("INDEX with phrase list:",phrase_list)
 	a = Lemmatizer()
 	lemmatised_list = []
 
